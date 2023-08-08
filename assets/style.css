@@ -5,3 +5,9 @@
     margin: 10px;
     border: solid black;
 }
+#password-button {
+    color: yellow;
+    background-color: fuchsia;
+    border-radius: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
