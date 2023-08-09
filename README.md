@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. Description of Weather Dashboard Code
+1. Description of PhishNado 
 
 2. Instalation
 
