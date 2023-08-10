@@ -27,14 +27,14 @@ fetch(fetchUrl)
   ////////////////////////
 
 // const apiKey = "YOUR_API_KEY"; // Replace with your actual API key
-const domain = "facebook.com";
+const domain = "";
 
-const apiUrl = `https://haveibeenpwned.com/api/v3/breacheddomain/${domain}`;
+const apiUrl = `https://haveibeenpwned.com/api/v3/breaches`;
 
 fetch(apiUrl, {
   headers: {
-    "User-Agent": "YourAppName", // Replace with your app's name or identifier
-    "hibp-api-key": apiKey
+    "Accept": "application/json",
+    "User-Agent": "PhishNado", // Replace with your app's name or identifier
   }
 })
 .then(response => {
