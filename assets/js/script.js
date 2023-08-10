@@ -51,3 +51,23 @@ fetch(apiUrl, {
   console.error("Error:", error);
 });
   
+// Joke API
+document.getElementById('fetchJokeButton').addEventListener('click', () => {
+const category = 'Programming';
+const apiUrl = `https://v2.jokeapi.dev/joke/${category}`;
+
+fetch(apiUrl)
+  .then(response => response.json())
+  .then(data => {
+    const jokeContainer = document.getElementById('jokeContainer');
+
+    if (data.type === 'single') {
+      jokeContainer.innerHTML = `<p>${data.joke}</p>`;
+    } else if (data.type === 'twopart') {
+      jokeContainer.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
+});
