@@ -18,8 +18,8 @@
     </header>
     <section>
       <form>
-        <label class="font-bold text-2xl" for="user_search">Search:</label>
-        <input type="text" id="user_search" name="user_search" class="focus:bg-sky-100" />
+        <label class="placeholder-gray-400 border font-bold text-2xl" placeholder="John" for="user_search">Search:</label>
+        <input type="text" id="user_search" name="user_search" class="focus:bg-sky-100 placeholder-gray-500 border" placeholder="Enter Search Here"/>
         <br>
         <label>
           <input type="radio" name="option" value="social_account" class="pt-6" /> Social
@@ -29,7 +29,7 @@
           <input type="radio" name="option" value="email" /> Email
         </label>
         <br>
-        <input class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500" type="submit" value="Submit" />
+        <input class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 hover:opacity-50" type="submit" value="Submit" />
       </form>
       <img class="p+ max-w-screen-xl mx-auto pb-12 flex"
         src="./assets/images/nigerianprince_2.jpg"
@@ -37,13 +37,19 @@
         alt="knee slapper, phish spankin' meme"
       />
     </section>
+<<<<<<< HEAD
     <div id="password-content">
       Need a safe password:<br />
       <div id="new-password"></div>
       <button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 " id="password-button">Create Here</button>
+=======
+    <div id="password-content" class="font-bold">
+      Need a safe password?<br />
+      <button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 hover:opacity-50" id="password-button">Create Here</button>
+>>>>>>> 44150a01cd50917e01c724760927ce457f06dbf3
     </div>
-    <section id="results_page">
-      <h1>Here are your results!</h1>
+    <section id="results_page" class="border-x-4 border-y-2 border-sky-600 border-dashed">
+      <h1 class="italic">Here are your results!</h1> 
       <div class="search_result">
         ⭐️ Cloudy <em><strong>without</strong></em> a chance of phish ⭐️
       </div>
@@ -51,7 +57,7 @@
       <div class="search_result">⭐️ Ain't no stress, it's a success! ⭐️</div>
       <section id="result_data_container"></section>
     </section>
-    <br><br><button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500" id="fetchJokeButton">Hankering for a hearty har-har?</button>
+    <br><br><button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 hover:opacity-50" id="fetchJokeButton">Hankering for a hearty har-har?</button>
     <div id="jokeContainer"></div>
     <script src="./assets/js/script.js"></script>
   </body>
