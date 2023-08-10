@@ -15,26 +15,29 @@
 6. Features
 
 ## Description
-PhishNado is a website that allows you to perform multitple tasks. Inlcuding generating a safe unique password for your protection. This site also allows you to view breaches for multiple accounts so you can keep your information safe. 
+PhishNado is a website that allows you to perform multitple tasks. Inlcuding generating a safe unique password for your protection. This site also allows you to view jokes about programming.
 
 * HTML was formatted and created for website basics.
 * Tailwind was utilized and created in the HTML doc for styling purposes.
 * Javascript was utilized for two API's. 
 * API passwordgenerator was called via fetch command in order to create passwords.
-* API haveibeenpawned was called via fetch to allow users to see if there information has been breached.
+* Joke API was called via fetch  command in order to log jokes, also utlizing event listener. 
 
 ## Instalation
-
+No installation for this website is required
 
 ## Usage
+https://briellebroadt.github.io/PhishNado/
+User vists the webpage, once on the page user can click buttons to view programming jokes and or create a unique password.
 
 ## Screen Shot
 
 
 
 
-## Credits
 
+## Credits
+Ben Birdsall, Anthony LittleJohn, Brielle Broadt
 
 ## License 
 
