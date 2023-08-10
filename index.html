@@ -17,32 +17,21 @@
       <h1 class="p-5 font-bold text-3xl" id="title-name">Welcome to PhishNado</h1>
     </header>
     <section>
-      <form>
-        <label class="placeholder-gray-400 border font-bold text-2xl" placeholder="John" for="user_search">Search:</label>
-        <input type="text" id="user_search" name="user_search" class="focus:bg-sky-100 placeholder-gray-500 border" placeholder="Enter Search Here"/>
         <br>
-        <label>
-          <input type="radio" name="option" value="social_account" /> Social
-          Account
-        </label>
-        <label>
-          <input type="radio" name="option" value="email" /> Email
-        </label>
-        <br>
-        <input class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 hover:opacity-50" type="submit" value="Submit" />
       </form>
-      <img class="max-w-screen-xl mx-auto pb-12 flex"
+      <img class="p+ max-w-screen-xl mx-auto pb-12 flex"
         src="./assets/images/nigerianprince_2.jpg"
         width=300
         alt="knee slapper, phish spankin' meme"
       />
     </section>
-    <div id="password-content" class="font-bold">
-      Need a safe password?<br />
-      <button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 hover:opacity-50" id="password-button">Create Here</button>
+    <div id="password-content">
+      Need a safe password:<br />
+      <div id="new-password"></div>
+      <button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 " id="password-button">Create Here</button>
     </div>
     <section id="results_page" class="border-x-4 border-y-2 border-sky-600 border-dashed">
-      <h1 class="italic">Here are your results!</h1> 
+      
       <div class="search_result">
         ⭐️ Cloudy <em><strong>without</strong></em> a chance of phish ⭐️
       </div>
