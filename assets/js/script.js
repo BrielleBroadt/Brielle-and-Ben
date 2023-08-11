@@ -2,6 +2,9 @@ const num = true;
 const char = true;
 const caps = true;
 const len = 18; // min 7
+const numEl = document.getElementById('num');
+const charEl = document.getElementById('char');
+const capsEl = document.getElementById('caps');
 
 
 
