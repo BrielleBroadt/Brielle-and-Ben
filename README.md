@@ -27,7 +27,7 @@ Witty Web Wizard is a website that allows you to perform multitple tasks. Inlcud
 No installation for this website is required
 
 ## Usage
-https://briellebroadt.github.io/PhishNado/
+https://briellebroadt.github.io/Witty-Web-Wizard
 User vists the webpage, once on the page user can click buttons to view programming jokes and/or create a unique password.
 
 ## Screenshot
