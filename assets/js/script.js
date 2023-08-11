@@ -4,27 +4,33 @@ const caps = true;
 const len = 18; // min 7
 
 
-const fetchUrl = `https://passwordinator.onrender.com?num=${num}&char=${char}&caps=${caps}&len=${len}`;
-var password = "";
-fetch(fetchUrl)
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return res.json();
-  })
-  .then((data) => {
-     password = (data.data);
-  })
-  .catch((error) => {
-    console.error('Fetch error:', error);
-  });
+
 
   var button = document.getElementById("password-button");
   var newPassword = document.getElementById("new-password");
+
   button.addEventListener('click', function() {
-  console.log(password)
-    newPassword.textContent = password
+    
+
+    const fetchUrl = `https://passwordinator.onrender.com?num=${num}&char=${char}&caps=${caps}&len=${len}`;
+    var password = "";
+    fetch(fetchUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        password = (data.data);
+        newPassword.textContent = password;
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
+      });
+    // console.log(password)
+    // newPassword.textContent = '';
+    
   })
 
 
