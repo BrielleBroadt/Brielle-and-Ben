@@ -23,7 +23,7 @@ button.addEventListener('click', function() {
     .catch((error) => {
       console.error('Fetch error:', error);
     });
-    memeEl.style.display = 'block';
+    // memeEl.style.display = 'block';
     // memeEl.setAttribute("src", './assets/images/tada.png');
 })
 
