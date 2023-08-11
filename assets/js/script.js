@@ -1,38 +1,24 @@
-const num = true;
-const char = true;
-const caps = true;
-const len = 18; // min 7
+var button = document.getElementById("password-button");
+var newPassword = document.getElementById("new-password");
 
-
-
-
-  var button = document.getElementById("password-button");
-  var newPassword = document.getElementById("new-password");
-
-  button.addEventListener('click', function() {
-    
-
-    const fetchUrl = `https://passwordinator.onrender.com?num=${num}&char=${char}&caps=${caps}&len=${len}`;
-    var password = "";
-    fetch(fetchUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        password = (data.data);
-        newPassword.textContent = password;
-      })
-      .catch((error) => {
-        console.error('Fetch error:', error);
-      });
-    // console.log(password)
-    // newPassword.textContent = '';
-    
-  })
-
+button.addEventListener('click', function() {
+  const fetchUrl = `https://passwordinator.onrender.com?num=true&char=true&caps=true&len=18`;
+  var password = "";
+  fetch(fetchUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      password = (data.data);
+      newPassword.textContent = password;
+    })
+    .catch((error) => {
+      console.error('Fetch error:', error);
+    });
+})
 
 // Joke API
 document.getElementById('fetchJokeButton').addEventListener('click', () => {
