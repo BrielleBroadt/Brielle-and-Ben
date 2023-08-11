@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 var button = document.getElementById("password-button");
 var newPassword = document.getElementById("new-password");
 var memeEl = document.getElementById("checkbox-meme");
 var num = document.getElementById('num');
 var char = document.getElementById('char');
 var caps = document.getElementById('caps');
-=======
-const num = true;
-const char = true;
-const caps = true;
-const len = 18; // min 7
-const numEl = document.getElementById('num');
-const charEl = document.getElementById('char');
-const capsEl = document.getElementById('caps');
->>>>>>> a75dc1870a233da2f14753640a77dbcafcf87f1a
 
 // Password API
 button.addEventListener('click', function() {
@@ -33,6 +23,8 @@ button.addEventListener('click', function() {
     .catch((error) => {
       console.error('Fetch error:', error);
     });
+    memeEl.style.display = 'block';
+    memeEl.setAttribute("src", './assets/images/tada.png');
 })
 
 num.addEventListener('click', function() {
