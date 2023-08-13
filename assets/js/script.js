@@ -7,7 +7,7 @@ var caps = document.getElementById('caps');
 
 // Password API
 button.addEventListener('click', function() {
-  const fetchUrl = 'https://passwordinator.onrender.com?num=${num.checked}&char=${num.checked}&caps=${num.checked}&len=18';
+  const fetchUrl = 'https://passwordinator.onrender.com?num=${num.checked}&char=${char.checked}&caps=${caps.checked}&len=18';
   var password = "";
   fetch(fetchUrl)
     .then((response) => {
@@ -72,3 +72,22 @@ function init() {
 }
 
 init();
+
+const images = [
+  './assets/images/wizardhat1.jpg',
+  './assets/images/wizardhat2.jpg',
+  './assets/images/wizardhat3.jpg',
+  './assets/images/wizardhat4.jpg',
+  './assets/images/wizardhat5.jpg',
+  './assets/images/wizardhat6.jpg'
+  // Add more image URLs here
+];
+
+const randomImageElement = document.getElementById('randomImage');
+const showRandomBtn = document.getElementById('showRandomBtn');
+
+showRandomBtn.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const randomImageUrl = images[randomIndex];
+  randomImageElement.src = randomImageUrl;
+});
