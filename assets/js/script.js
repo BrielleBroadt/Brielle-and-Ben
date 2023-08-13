@@ -74,8 +74,12 @@ function init() {
 init();
 
 const images = [
-  './assets/images/hat1.jpg',
-  './assets/images/hat2.jpg',
+  './assets/images/wizardhat1.jpg',
+  './assets/images/wizardhat2.jpg',
+  './assets/images/wizardhat3.jpg',
+  './assets/images/wizardhat4.jpg',
+  './assets/images/wizardhat5.jpg',
+  './assets/images/wizardhat6.jpg'
   // Add more image URLs here
 ];
 
