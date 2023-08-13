@@ -72,3 +72,18 @@ function init() {
 }
 
 init();
+
+const images = [
+  './assets/images/hat1.jpg',
+  './assets/images/hat2.jpg',
+  // Add more image URLs here
+];
+
+const randomImageElement = document.getElementById('randomImage');
+const showRandomBtn = document.getElementById('showRandomBtn');
+
+showRandomBtn.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const randomImageUrl = images[randomIndex];
+  randomImageElement.src = randomImageUrl;
+});
