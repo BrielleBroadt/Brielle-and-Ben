@@ -2,17 +2,17 @@
 
 ## Table of Contents
 
-1. Description of Witty Web Wizard
+1. [Description of Witty Web Wizard](#description)
 
-2. Instalation
+2. [Installation](#installation)
 
-3. Usage
+3. [Usage](#usage)
 
-4. Credits
+4. [Credits](#credits)
 
-5. License
+5. [License](#license)
 
-6. Features
+6. [Features](#features)
 
 ## Description
 Witty Web Wizard is a website that allows you to perform multitple tasks. Inlcuding generating a safe unique password for your protection. This site also allows you to view jokes about programming.
