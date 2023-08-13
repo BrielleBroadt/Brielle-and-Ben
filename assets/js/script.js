@@ -90,4 +90,6 @@ showRandomBtn.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImageUrl = images[randomIndex];
   randomImageElement.src = randomImageUrl;
+  var text = document.getElementById("textField");
+  text.style.display = "block";
 });
