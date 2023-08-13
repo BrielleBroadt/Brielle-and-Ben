@@ -7,7 +7,7 @@ var caps = document.getElementById('caps');
 
 // Password API
 button.addEventListener('click', function() {
-  const fetchUrl = 'https://passwordinator.onrender.com?num=${num.checked}&char=${num.checked}&caps=${num.checked}&len=18';
+  const fetchUrl = 'https://passwordinator.onrender.com?num=${num.checked}&char=${char.checked}&caps=${caps.checked}&len=18';
   var password = "";
   fetch(fetchUrl)
     .then((response) => {
