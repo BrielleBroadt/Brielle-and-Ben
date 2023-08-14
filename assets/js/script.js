@@ -6,6 +6,9 @@ button.addEventListener('click', function() {
   var num = document.getElementById('num');
   var char = document.getElementById('char');
   var caps = document.getElementById('caps');
+
+  const loadingIndicator2 = document.getElementById("loadingIndicator1");
+  loadingIndicator1.style.display = "block";
   
   var newPassword = document.getElementById("new-password");
   const fetchUrl = `https://passwordinator.onrender.com?num=${num.checked}&char=${char.checked}&caps=${caps.checked}&len=18`;
@@ -15,6 +18,7 @@ button.addEventListener('click', function() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+      loadingIndicator2.style.display = "none";
       return response.json();
     })
     .then((data) => {
@@ -22,6 +26,7 @@ button.addEventListener('click', function() {
       newPassword.textContent = password;
     })
     .catch((error) => {
+      loadingIndicator2.style.display = "none";
       console.error('Fetch error:', error);
     });
     // memeEl.style.display = 'block';
@@ -62,6 +67,9 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
       category = cat.id;
     }
   }
+  const loadingIndicator2 = document.getElementById("loadingIndicator2");
+  loadingIndicator2.style.display = "block";
+  loadingIndicator2.scrollIntoView({behavior: 'smooth'});
 
   const apiUrl = `https://v2.jokeapi.dev/joke/${category}`;
   fetch(apiUrl)
@@ -75,9 +83,11 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
         jokeEl.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
       }
       jokeEl.scrollIntoView({behavior: 'smooth'});
+      loadingIndicator2.style.display = "none";
     })
     .catch(error => {
       console.error('An error occurred:', error);
+      loadingIndicator2.style.display = "none";
     });
 });
 

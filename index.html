@@ -43,7 +43,10 @@
           </form>
         </section>
         <div id="new-password"></div>
-        <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="password-button">Create Here</button>
+        <div class="flex">
+          <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="password-button">Create Here</button>
+          <div id="loadingIndicator1" class="loading"></div>
+        </div>
       </div>
       <img id="checkbox-meme" alt="funny ha ha">
     </section>
@@ -66,7 +69,10 @@
           <input type="radio" name="joke_container" id="Miscellaneous"> Miscellaneous<br>
         </div>
       </form>
-      <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
+      <div class="flex">
+        <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
+        <div id="loadingIndicator2" class="loading"></div>
+      </div>
       <div id="jokeEl" class="text-sky-900 font-bold"></div>
     </section>
     <script src="./assets/js/script.js"></script>
