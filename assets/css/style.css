@@ -61,6 +61,7 @@
     background-color: rgb(248, 246, 178);
     /* min-width: 290px; */
     width: 500px;
+    max-width:95vw;
     min-height:70px;
     padding:10px;
     margin-top:10px;
