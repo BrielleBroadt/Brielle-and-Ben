@@ -4,42 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Witty Web Wizard</title>
+    <title class="border-x-8 border-y-2 border-black border-solid">Witty Web Wizard</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   </head>
-  <body class="bg-lime-50 text-center h-200">
-    <header class="text-center bg-emerald-300 h-20 ">
-      <h1 class="p-5 font-bold text-3xl" id="title-name">Welcome to Witty Web Wizard!</h1>
+  <body class="bg-lime-50 bg-gradient-to-r from-lime-50 to-yellow-100">
+    <header class="text-center bg-emerald-300 h-20 bg-cover text-yellow-100" style="background-image: url('./assets/images/starlight.jpg');">
+      <h1 class="p-5 font-bold text-3xl animate-pulse" id="title-name">Welcome to Witty Web Wizard!</h1>
     </header>
-    <section><br>
-      <img class="p+ max-w-screen-xl mx-auto pb-12 flex"
-        src="./assets/images/nigerianprince_2.jpg"
-        width=300
+    <div id="textField" style="display:none;" class="text-sky-900 font-bold">
+      Now you are ready to be witty, Meet your new hat of destiny
+    </div>
+    <div class="container float-right">
+      <img id="randomImage">
+      <button 
+        id="showRandomBtn" 
+        class = "float-right top-20 rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400">
+        Choose your Witty Wizarding Hat!
+      </button>
+  </div>
+    <section class="center-meme"><br>
+      <img class="img1" id="checkbox-meme"
+        src="./assets/images/wizard-will-now-install.jpeg"
+        width=400
         alt="knee slapper, phish spankin' meme"/>
     </section>
-    <div id="password-content">Need a safe password:<br/>
-      <section id="pass-options-el">
-        <form>
-          <input type="checkbox" name="num" id="num">
-          <label for="num">Numbers</label><br>
-          <input type="checkbox" name="char" id="char">
-          <label for="char">Special Characters</label><br>
-          <input type="checkbox" name="caps" id="caps">
-          <label for="caps">Caps</label><br>
-        </form>
+    <section id="content">
+      <section id="pass-container" class="text-bold text-center">
+        <div id="password-content" class="font-extrabold text-sky-900 text-lg">Need a safe password:<br>
+          <section id="pass-options-el">
+            <form>
+              <input type="checkbox" name="num" id="num">
+              <label for="num">Numbers</label><br>
+              <input type="checkbox" name="char" id="char">
+              <label for="char">Special Characters</label><br>
+              <input type="checkbox" name="caps" id="caps">
+              <label for="caps">Caps</label><br>
+            </form>
+          </section>
+          <div class="flex">
+            <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="password-button">Create Here</button>
+            <div id="loadingIndicator1" class="loading"></div>
+          </div>
+          <div class="pass-box-1">
+            <div class="pass-box-2">
+              <div id="new-password"></div>
+            </div>
+          </div>
+        </div>
       </section>
-      <div id="new-password"></div>
-      <button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 " id="password-button">Create Here</button>
-    </div>
-    <section id="results_page" class="border-x-4 border-y-2 border-sky-600 border-dashed">
+      <section id="joke_container">
+        <form class="flex joke-options">
+          <div class="column">
+            <input type="radio" name="joke_container" id="Any" checked> Any<br>
+            <input type="radio" name="joke_container" id="Programming"> Programming<br>
+            <input type="radio" name="joke_container" id="Dark"> Dark<br>
+            <input type="radio" name="joke_container" id="Pun"> Pun<br>
+          </div>  
+          <div class="column">
+            <input type="radio" name="joke_container" id="Spooky"> Spooky<br>
+            <input type="radio" name="joke_container" id="Christmas"> Christmas<br>
+            <input type="radio" name="joke_container" id="Miscellaneous"> Miscellaneous<br>
+          </div>
+        </form>
+        <div class="flex">
+          <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
+          <div id="loadingIndicator2" class="loading"></div>
+        </div>
+        <div class="pass-box-1">
+          <div class="joke-box-2">
+            <div id="jokeEl" class="text-sky-900 font-bold"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer id="results_page" class="border-x-4 border-y-2 border-black border-solid text-center italic text-yellow-100 bg-sky-900">
       <div class="search_result">⭐️ Cloudy <em><strong>without</strong></em> a chance of phish ⭐️</div>
       <div class="search_result">⭐️ The skies are clear today ⭐️</div>
       <div class="search_result">⭐️ Ain't no stress, it's a success! ⭐️</div>
-    </section>
-    <br><button class="rounded-full bg-emerald-300 font-bold border-4 border-sky-500 hover:opacity-50" id="fetchJokeButton">Hankering for a hearty har-har?</button>
-    <div id="jokeContainer"></div>
+    </footer>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
+
