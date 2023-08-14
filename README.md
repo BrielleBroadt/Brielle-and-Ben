@@ -31,8 +31,8 @@ https://briellebroadt.github.io/Witty-Web-Wizard
 User vists the webpage, once on the page user can click buttons to view programming jokes and/or create a unique password.
 
 ## Screenshot
+![Screenshot 2023-08-14 witttty](https://github.com/BrielleBroadt/Witty-Web-Wizard/assets/135186013/a6c499d1-654f-47e6-8ae2-746f42d5d812)
 
-![screenshot]()
 
 ## Credits
 Ben Birdsall, Anthony Littlejohn, Brielle Broadt
