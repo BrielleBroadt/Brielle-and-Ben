@@ -14,8 +14,8 @@
       <h1 class="p-5 font-bold text-3xl animate-pulse" id="title-name">Welcome to Witty Web Wizard!</h1>
     </header>
     <div id="textField" style="display:none;" class="text-sky-900 font-bold">
-      Now you are ready to be witty, Meet your new hat of destiny</div>
-
+      Now you are ready to be witty, Meet your new hat of destiny
+    </div>
     <div class="container float-right">
       <img id="randomImage">
       <button 
@@ -25,7 +25,7 @@
       </button>
   </div>
     <section><br>
-      <img class="img1"
+      <img class="img1" 
         src="./assets/images/nigerianprince_2.jpg"
         width=400
         alt="knee slapper, phish spankin' meme"/>
@@ -52,9 +52,23 @@
       <div class="search_result">⭐️ The skies are clear today ⭐️</div>
       <div class="search_result">⭐️ Ain't no stress, it's a success! ⭐️</div>
     </section>
-    <br><button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Hankering for a hearty har-har?</button>
-    <div id="jokeContainer" class="text-sky-900 font-bold""></div>
-    
+    <section id="joke_container">
+      <form>
+        <div class="column">
+          <input type="radio" name="joke_container" id="joke-any" checked> Any<br>
+          <input type="radio" name="joke_container" id="joke-programming"> Programming<br>
+          <input type="radio" name="joke_container" id="joke-dark"> Dark<br>
+          <input type="radio" name="joke_container" id="joke-pun"> Pun<br>
+        </div>  
+        <div class="column">
+          <input type="radio" name="joke_container" id="joke-spooky"> Spooky<br>
+          <input type="radio" name="joke_container" id="joke-christmas"> Christmas<br>
+          <input type="radio" name="joke_container" id="joke-miscellaneous"> Miscellaneous<br>
+        </div>
+      </form>
+      <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
+      <div id="jokeEl" class="text-sky-900 font-bold"></div>
+    </section>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
