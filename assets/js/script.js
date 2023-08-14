@@ -46,7 +46,7 @@ function checkCheckboxes() {
   } else if (num.checked + char.checked + caps.checked == 3) {
     memeEl.setAttribute("src", './assets/images/you-have-no-power-here.jpeg');
   } else {
-    memeEl.setAttribute("src", "./assets/images/nigerianprince_2.jpg");
+    memeEl.setAttribute("src", "./assets/images/wizard-will-now-install.jpeg");
   }
 }
 
