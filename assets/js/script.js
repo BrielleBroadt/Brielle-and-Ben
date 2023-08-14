@@ -29,8 +29,8 @@ button.addEventListener('click', function() {
       loadingIndicator2.style.display = "none";
       console.error('Fetch error:', error);
     });
-    // memeEl.style.display = 'block';
-    // memeEl.setAttribute("src", './assets/images/tada.png');
+    memeEl.style.display = 'block';
+    memeEl.setAttribute("src", './assets/images/tada.png');
 })
 
 num.addEventListener('click', checkCheckboxes)
