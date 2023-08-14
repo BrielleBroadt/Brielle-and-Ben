@@ -19,6 +19,8 @@
 
 #checkbox-meme {
     height:350px;
+    border:black 1px solid;
+    border-radius: 2px;
 }
 
 .loading {
@@ -75,4 +77,9 @@
 .joke-options {
     width:300px;
     justify-content: space-between;
+}
+
+#results_page {
+    border-left:0;
+    border-right:0;
 }
