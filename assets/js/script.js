@@ -41,10 +41,13 @@ function checkCheckboxes() {
   memeEl.style.display = 'block';
   if (num.checked + char.checked + caps.checked == 1) {
     memeEl.setAttribute("src", './assets/images/it-doesnt-do-anything.jpeg');
+    memeEl.scrollIntoView({behavior: 'smooth'});
   } else if (num.checked + char.checked + caps.checked == 2) {
     memeEl.setAttribute("src", './assets/images/are-you-listening.gif');
+    memeEl.scrollIntoView({behavior: 'smooth'});
   } else if (num.checked + char.checked + caps.checked == 3) {
     memeEl.setAttribute("src", './assets/images/you-have-no-power-here.jpeg');
+    memeEl.scrollIntoView({behavior: 'smooth'});
   } else {
     memeEl.style.display = 'none';
   }
