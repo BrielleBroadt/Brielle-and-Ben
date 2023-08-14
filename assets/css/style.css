@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind tuilities;
 
+.center-meme {
+    display:flex;
+    justify-content: center;
+    width:100vw;
+    padding: 20px 0 20px 0;
+}
+
+#content {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
 #checkbox-meme {
     height:200px;
 }
@@ -22,30 +36,40 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
-#pass-box-1 {
+.pass-box-1 {
     display:flex;
     justify-content: center;
 }
 
-#pass-box-2 {
+.pass-box-2 {
     border: 1px black solid;
     background-color: rgb(248, 246, 178);
     width: 270px;
     height: 35px;
 }
 
+.joke-box-2 {
+    border: 1px black solid;
+    background-color: rgb(248, 246, 178);
+    min-width: 290px;
+    max-width: 90vw;
+    min-height:35px;
+    padding:10px;
+    margin-top:10px;
+}
+
 #joke_container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 20px;
-    padding-top: 50px;
+    /* padding-bottom: 20px; */
+    /* padding-top: 50px; */
 }
 
 .joke-options {
-    width:500px;
-    justify-content: space-evenly;
+    width:300px;
+    justify-content: space-between;
 }

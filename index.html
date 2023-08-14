@@ -24,55 +24,61 @@
         Choose your Witty Wizarding Hat!
       </button>
   </div>
-    <section><br>
+    <section class="center-meme"><br>
       <img class="img1" 
         src="./assets/images/nigerianprince_2.jpg"
         width=400
         alt="knee slapper, phish spankin' meme"/>
     </section>
-    <section id="pass-container" class="text-bold text-center">
-      <div id="password-content" class="font-extrabold text-sky-900 text-lg">Need a safe password:<br>
-        <section id="pass-options-el">
-          <form>
-            <input type="checkbox" name="num" id="num">
-            <label for="num">Numbers</label><br>
-            <input type="checkbox" name="char" id="char">
-            <label for="char">Special Characters</label><br>
-            <input type="checkbox" name="caps" id="caps">
-            <label for="caps">Caps</label><br>
-          </form>
-        </section>
-        <div id="pass-box-1">
-          <div id="pass-box-2">
-            <div id="new-password"></div>
+    <section id="content">
+      <section id="pass-container" class="text-bold text-center">
+        <div id="password-content" class="font-extrabold text-sky-900 text-lg">Need a safe password:<br>
+          <section id="pass-options-el">
+            <form>
+              <input type="checkbox" name="num" id="num">
+              <label for="num">Numbers</label><br>
+              <input type="checkbox" name="char" id="char">
+              <label for="char">Special Characters</label><br>
+              <input type="checkbox" name="caps" id="caps">
+              <label for="caps">Caps</label><br>
+            </form>
+          </section>
+          <div class="flex">
+            <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="password-button">Create Here</button>
+            <div id="loadingIndicator1" class="loading"></div>
+          </div>
+          <div class="pass-box-1">
+            <div class="pass-box-2">
+              <div id="new-password"></div>
+            </div>
           </div>
         </div>
+        <img id="checkbox-meme" alt="funny ha ha">
+      </section>
+      <section id="joke_container">
+        <form class="flex joke-options">
+          <div class="column">
+            <input type="radio" name="joke_container" id="Any" checked> Any<br>
+            <input type="radio" name="joke_container" id="Programming"> Programming<br>
+            <input type="radio" name="joke_container" id="Dark"> Dark<br>
+            <input type="radio" name="joke_container" id="Pun"> Pun<br>
+          </div>  
+          <div class="column">
+            <input type="radio" name="joke_container" id="Spooky"> Spooky<br>
+            <input type="radio" name="joke_container" id="Christmas"> Christmas<br>
+            <input type="radio" name="joke_container" id="Miscellaneous"> Miscellaneous<br>
+          </div>
+        </form>
         <div class="flex">
-          <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="password-button">Create Here</button>
-          <div id="loadingIndicator1" class="loading"></div>
+          <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
+          <div id="loadingIndicator2" class="loading"></div>
         </div>
-      </div>
-      <img id="checkbox-meme" alt="funny ha ha">
-    </section>
-    <section id="joke_container">
-      <form class="flex joke-options">
-        <div class="column">
-          <input type="radio" name="joke_container" id="Any" checked> Any<br>
-          <input type="radio" name="joke_container" id="Programming"> Programming<br>
-          <input type="radio" name="joke_container" id="Dark"> Dark<br>
-          <input type="radio" name="joke_container" id="Pun"> Pun<br>
-        </div>  
-        <div class="column">
-          <input type="radio" name="joke_container" id="Spooky"> Spooky<br>
-          <input type="radio" name="joke_container" id="Christmas"> Christmas<br>
-          <input type="radio" name="joke_container" id="Miscellaneous"> Miscellaneous<br>
+        <div class="pass-box-1">
+          <div class="joke-box-2">
+            <div id="jokeEl" class="text-sky-900 font-bold"></div>
+          </div>
         </div>
-      </form>
-      <div class="flex">
-        <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
-        <div id="loadingIndicator2" class="loading"></div>
-      </div>
-      <div id="jokeEl" class="text-sky-900 font-bold"></div>
+      </section>
     </section>
     <footer id="results_page" class="border-x-4 border-y-2 border-black border-solid text-center italic text-yellow-100 bg-sky-900">
       <div class="search_result">⭐️ Cloudy <em><strong>without</strong></em> a chance of phish ⭐️</div>
