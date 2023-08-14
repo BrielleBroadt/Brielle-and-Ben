@@ -74,6 +74,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
       } else if (data.type === 'twopart') {
         jokeEl.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
       }
+      jokeEl.scrollIntoView({behavior: 'smooth'});
     })
     .catch(error => {
       console.error('An error occurred:', error);
