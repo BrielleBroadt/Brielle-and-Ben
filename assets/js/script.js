@@ -125,5 +125,6 @@ showRandomBtn.addEventListener('click', () => {
     const randomImageUrl = images[randomIndex];
     randomImageElement.src = randomImageUrl;
     hatChosen = true;
+    showRandomBtn.style.display = 'none';
   }
 });
