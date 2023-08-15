@@ -41,12 +41,18 @@ saveBtn.addEventListener("click", function(){
 })
 
 var submitBtn = document.getElementById("submit")
-submitBtn.addEventListener("click", function(){
-  if (submitBtn.value !="") {
-    console.log("yourmom")
+var inputWebsite = document.getElementById("input-website")
+submitBtn.addEventListener("click", function(event){
+
+  event.preventDefault();
+  if (inputWebsite.value !="") {
+    var website = input.website.value;
+    localStorage.getItem()
+
   }
   console.log("hi")
 })
+
 
 
 num.addEventListener('click', checkCheckboxes)
