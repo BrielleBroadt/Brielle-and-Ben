@@ -13,9 +13,6 @@
     <header class="text-center bg-emerald-300 h-20 bg-cover text-yellow-100" style="background-image: url('./assets/images/starlight.jpg');">
       <h1 class="p-5 font-bold text-3xl animate-pulse" id="title-name">Welcome to Witty Web Wizard!</h1>
     </header>
-    <!-- <div id="textField" style="display:none;" class="text-sky-900 font-bold">
-      Now you are ready to be witty, Meet your new hat of destiny
-    </div> -->
     <div class="flex col">
       <div id="hat-box">
         <img id="randomImage" src="./assets/images/point-down.png">
@@ -23,7 +20,7 @@
       <button 
         id="showRandomBtn" 
         class = "float-right top-20 rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400">
-        Choose your Witty Wizarding Hat!
+        Receive your Witty Wizarding Hat!
       </button>
     </div>
     <section class="center-meme"><br>
@@ -52,22 +49,11 @@
             <div class="pass-box-1">
               <div class="pass-box-2">
                 <div id="new-password"></div>
-                <image id="save-btn" src = "./assets/images/icons8-save-50.png"></image>
               </div>
             </div>
           </div>
-          <section id="save-pass-container">
-            <!-- <div class="container-box"> -->
-              <form>
-                <label>What's this password for? 🧙🏿‍♂️</label> <br>
-                <input id="input-website" type ="text">
-                <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="submit"> Submit</button>
-              </form>
-            <!-- </div> -->
-          </section>
         </div>
       </section>
-      
       <section id="joke_container">
         <div class="container-box">
           <form class="flex joke-options">
@@ -84,20 +70,25 @@
             </div>
           </form>
           <div class="flex">
+            <image id="open-jokes-btn" class='icon' src="./assets/images/folder-icon.png"></image>
             <button class="rounded-full bg-gray-600 font-bold border-4 border-fuchsia-400 hover:opacity-50 text-fuchsia-400" id="fetchJokeButton">Generate Joke</button>
             <div id="loadingIndicator2" class="loading"></div>
+            <image id="save-btn" class='icon' src = "./assets/images/icons8-save-50.png"></image>
           </div>
           <div class="pass-box-1">
             <div class="joke-box-2">
               <div id="jokeEl" class="text-sky-900 font-bold"></div>
             </div>
+            
           </div>
         </div>
       </section>
     </section>
-    <div id="saved-passwords-container">
-      <div>Your saved passwords</div>
-      <div id="saved-pass-el"></div>
+    <div id="saved-jokes-container">
+      <div class="flex">
+        <div>Saved Jokes</div>
+        <div id="jokes-el"></div>
+      </div>
     </div>
     <footer id="results_page" class="border-x-4 border-y-2 border-black border-solid text-center italic text-yellow-100 bg-sky-900">
       <div class="search_result">⭐️ Cloudy <em><strong>without</strong></em> a chance of evil spells ⭐️</div>
