@@ -149,8 +149,8 @@
         width:100%;
         justify-content: center;
     }
-    #joke-container {
-        align-items: center;
+    #joke_container {
+        justify-content: center;
     }
     .container-box {
         width:90vw;
