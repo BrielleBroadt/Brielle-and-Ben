@@ -32,32 +32,6 @@ button.addEventListener('click', function() {
     memeEl.setAttribute("src", './assets/images/tada.png');
 })
 
-var passContainer = document.getElementById("save-pass-container")
-var saveBtn = document.getElementById("save-btn")
-var newPassword = document.getElementById("new-password");
-saveBtn.addEventListener("click", function(){
-  if (newPassword.textContent != "") {
-    passContainer.style.display="flex";
-    passContainer.style.justifyContent="center";
-    saveBtn.style.display = 'none';
-  }
-})
-
-var submitBtn = document.getElementById("submit")
-var inputWebsite = document.getElementById("input-website")
-submitBtn.addEventListener("click", function(event){
-
-  event.preventDefault();
-  if (inputWebsite.value !="") {
-    var website = input.website.value;
-    localStorage.getItem()
-
-  }
-  console.log("hi")
-})
-
-
-
 num.addEventListener('click', checkCheckboxes)
 char.addEventListener('click', checkCheckboxes)
 caps.addEventListener('click', checkCheckboxes)
@@ -76,8 +50,11 @@ function checkCheckboxes() {
 }
 
 // Joke API
+var jokeGenerated = false;
+var savedJoke;
+
 document.getElementById('fetchJokeButton').addEventListener('click', () => {
-  var category = 'Programming';
+  savedJoke = [];
   const any = document.getElementById("Any");
   const programming = document.getElementById("Programming");
   const dark = document.getElementById("Dark");
@@ -92,6 +69,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
       category = cat.id;
     }
   }
+
   const loadingIndicator2 = document.getElementById("loadingIndicator2");
   loadingIndicator2.style.display = "block";
   loadingIndicator2.scrollIntoView({behavior: 'smooth'});
@@ -103,18 +81,29 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
       const jokeEl = document.getElementById('jokeEl');
 
       if (data.type === 'single') {
+        savedJoke[0] = data.joke;
         jokeEl.innerHTML = `<p>${data.joke}</p>`;
       } else if (data.type === 'twopart') {
+        savedJoke[0] = data.setup;
+        savedJoke[1] = data.delivery;
         jokeEl.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
       }
       jokeEl.scrollIntoView({behavior: 'smooth'});
       loadingIndicator2.style.display = "none";
+      jokeGenerated = true;
     })
     .catch(error => {
       console.error('An error occurred:', error);
       loadingIndicator2.style.display = "none";
     });
-});
+  });
+
+saveBtn = document.getElementById('save-btn');
+saveBtn.addEventListener("click", function(){
+  if (jokeGenerated) {
+    console.log(savedJoke);
+  }
+})
 
 // Wizard hat generator
 const images = [
@@ -133,6 +122,6 @@ showRandomBtn.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImageUrl = images[randomIndex];
   randomImageElement.src = randomImageUrl;
-  var text = document.getElementById("textField");
-  text.style.display = "block";
+  // var text = document.getElementById("textField");
+  // text.style.display = "block";
 });
