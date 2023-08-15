@@ -103,7 +103,13 @@ saveBtn.addEventListener("click", function(){
   if (jokeGenerated) {
     console.log(savedJoke);
   }
-})
+  var savedJokes= document.getElementById("saved-jokes-container")
+  var openJokes = document.getElementById("open-jokes-btn")
+  savedJokes.addEventListener("click", function(){
+    
+  })
+  )
+
 
 // Wizard hat generator
 const images = [
