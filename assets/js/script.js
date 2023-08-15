@@ -117,11 +117,13 @@ const images = [
 
 const randomImageElement = document.getElementById('randomImage');
 const showRandomBtn = document.getElementById('showRandomBtn');
+var hatChosen = false;
 
 showRandomBtn.addEventListener('click', () => {
-  const randomIndex = Math.floor(Math.random() * images.length);
-  const randomImageUrl = images[randomIndex];
-  randomImageElement.src = randomImageUrl;
-  // var text = document.getElementById("textField");
-  // text.style.display = "block";
+  if (!hatChosen){
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImageUrl = images[randomIndex];
+    randomImageElement.src = randomImageUrl;
+    hatChosen = true;
+  }
 });
