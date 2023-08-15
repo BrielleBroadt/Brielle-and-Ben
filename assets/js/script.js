@@ -31,6 +31,7 @@ button.addEventListener('click', function() {
     });
     memeEl.setAttribute("src", './assets/images/tada.png');
 })
+
 var passContainer = document.getElementById("save-pass-container")
 var saveBtn = document.getElementById("save-btn")
 var newPassword = document.getElementById("new-password");
@@ -38,6 +39,7 @@ saveBtn.addEventListener("click", function(){
   if (newPassword.textContent != "") {
     passContainer.style.display="flex";
     passContainer.style.justifyContent="center";
+    saveBtn.style.display = 'none';
   }
 })
 
@@ -116,7 +118,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
 
 // Wizard hat generator
 const images = [
-  './assets/images/wizardhat1.jpg',
+  // './assets/images/wizardhat1.jpg',
   './assets/images/wizardhat2.jpg',
   './assets/images/wizardhat3.jpg',
   './assets/images/wizardhat4.jpg',
