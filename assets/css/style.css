@@ -8,9 +8,9 @@
 #content {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
+    gap:10px;
     margin-top:20px;
     margin-bottom: 20px;
-    /* background-color: purple; */
     width:100vw;
 }
 
@@ -48,12 +48,13 @@
     border: 1px black solid;
     background-color: rgb(248, 246, 178);
     width: 270px;
+    max-width:80vw;
     height: 35px;
     margin-top:10px;
     position:relative;
 }
 
-#save-btn{
+#save-btn {
     position:absolute;
     top: 0;
     right: -50px;
@@ -72,29 +73,39 @@
 .joke-box-2 {
     border: 1px black solid;
     background-color: rgb(248, 246, 178);
-    /* width: 500px; */
-    min-width:350px;
+    width:42vw;
     min-height:70px;
     padding:10px;
     margin-top:10px;
 }
 
 #pass-container {
-    /* background-color: orange; */
+    display:flex;
+    justify-content: right;
     width:50vw;
+}
+
+.container-box {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:rgb(33,73,107) 8px solid;
+    border-radius: 8px;
+    padding:40px 20px 20px 20px;
+    height:360px;
+    width:48vw;
+    margin:0;
 }
 
 #joke_container {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     float:right;
-    /* width:50vw; */
-    /* background-color: blue; */
 }
 
 .joke-options {
     width:300px;
+    max-width:80vw;
     justify-content: space-between;
 }
 
@@ -103,12 +114,29 @@
     border-right:0;
 }
 
+@media screen and (max-width:425px){
+    #save-btn {
+        top:50px;
+        right:117px;
+    }
+}
+
 @media screen and (max-width:768px){
     #content {
         grid-template-columns: 1fr;
     }
     #pass-container {
         width:100%;
+        justify-content: center;
+    }
+    #joke-container {
+        align-items: center;
+    }
+    .container-box {
+        width:90vw;
+    }
+    .joke-box-2 {
+        width:70vw;
     }
 }
 

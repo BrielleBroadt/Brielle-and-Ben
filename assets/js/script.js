@@ -36,7 +36,8 @@ var saveBtn = document.getElementById("save-btn")
 var newPassword = document.getElementById("new-password");
 saveBtn.addEventListener("click", function(){
   if (newPassword.textContent != "") {
-   passContainer.style.display="block"
+    passContainer.style.display="flex";
+    passContainer.style.justifyContent="center";
   }
 })
 
