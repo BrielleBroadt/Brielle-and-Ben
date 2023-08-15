@@ -31,6 +31,23 @@ button.addEventListener('click', function() {
     });
     memeEl.setAttribute("src", './assets/images/tada.png');
 })
+var passContainer = document.getElementById("save-pass-container")
+var saveBtn = document.getElementById("save-btn")
+var newPassword = document.getElementById("new-password");
+saveBtn.addEventListener("click", function(){
+  if (newPassword.textContent != "") {
+   passContainer.style.display="block"
+  }
+})
+
+var submitBtn = document.getElementById("submit")
+submitBtn.addEventListener("click", function(){
+  if (submitBtn.value !="") {
+    console.log("yourmom")
+  }
+  console.log("hi")
+})
+
 
 num.addEventListener('click', checkCheckboxes)
 char.addEventListener('click', checkCheckboxes)
