@@ -101,14 +101,15 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
   if (jokeGenerated) {
-    console.log(savedJoke);
-  }
+  var savedJoke = localStorage.getItem("saved-joke")
+    localStorage
+  }})
+
   var savedJokes= document.getElementById("saved-jokes-container")
   var openJokes = document.getElementById("open-jokes-btn")
-  savedJokes.addEventListener("click", function(){
-    
+
+  openJokes.addEventListener("click", function(){
   })
-  )
 
 
 // Wizard hat generator
