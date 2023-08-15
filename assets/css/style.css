@@ -34,6 +34,7 @@
     transform: translate(-50%, -50%);
     display: none;
     transform: rotate(3deg);
+    margin-left:10px;
 }
 
 .flex {
@@ -50,6 +51,7 @@
 .pass-box-1 {
     display:flex;
     justify-content: center;
+    /* position:relative; */
 }
 
 .pass-box-2 {
@@ -63,13 +65,18 @@
 }
 
 #save-btn {
-    position:absolute;
-    top: 0;
-    right: -50px;
     width: 35px;
+    height: 35px;
+    margin-left: 15px;
 }
 
-#save-btn:active {
+#open-jokes-btn {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.icon:active {
     background-color: rgb(205, 202, 131);
     border-radius: 10px;
 }
@@ -90,7 +97,7 @@
 #pass-container {
     display:flex;
     justify-content: right;
-    width:50vw;
+    /* width:50vw; */
 }
 
 .container-box {
@@ -115,12 +122,12 @@
     height:260px;
     width:250px;
     margin:10px;
+    background-color: rgb(254,254,254);
 }
 
 #joke_container {
     display: flex;
-    justify-content: center;
-    float:right;
+    justify-content: left;
 }
 
 .joke-options {
@@ -134,13 +141,6 @@
     border-right:0;
 }
 
-@media screen and (max-width:425px){
-    #save-btn {
-        top:50px;
-        right:117px;
-    }
-}
-
 @media screen and (max-width:768px){
     #content {
         grid-template-columns: 1fr;
@@ -149,8 +149,8 @@
         width:100%;
         justify-content: center;
     }
-    #joke-container {
-        align-items: center;
+    #joke_container {
+        justify-content: center;
     }
     .container-box {
         width:90vw;
@@ -161,8 +161,8 @@
 }
 
 @media screen and (min-width:1020px){
-    #save-btn:hover {
+    .icon:hover {
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
+        border-radius: 5px;
     }
 }
