@@ -97,7 +97,7 @@
 #pass-container {
     display:flex;
     justify-content: right;
-    width:50vw;
+    /* width:50vw; */
 }
 
 .container-box {
@@ -127,8 +127,7 @@
 
 #joke_container {
     display: flex;
-    justify-content: center;
-    float:right;
+    justify-content: left;
 }
 
 .joke-options {
@@ -141,13 +140,6 @@
     border-left:0;
     border-right:0;
 }
-
-/* @media screen and (max-width:425px){
-    #save-btn {
-        top:50px;
-        right:117px;
-    }
-} */
 
 @media screen and (max-width:768px){
     #content {
