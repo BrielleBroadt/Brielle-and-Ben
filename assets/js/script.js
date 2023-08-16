@@ -30,7 +30,7 @@ button.addEventListener('click', function() {
       loadingIndicator2.style.display = "none";
       console.error('Fetch error:', error);
     });
-    memeEl.setAttribute("src", './assets/images/tada.png');
+    memeEl.setAttribute("src", './assets/images/tada-face-left.png');
 })
 
 num.addEventListener('click', checkCheckboxes)
@@ -59,6 +59,7 @@ var jokeGenerated = false;
 var savedJoke;
 
 document.getElementById('fetchJokeButton').addEventListener('click', () => {
+  memeEl.setAttribute("src", './assets/images/tada-face-right.png');
   savedJoke = [];
   const any = document.getElementById("Any");
   const programming = document.getElementById("Programming");
