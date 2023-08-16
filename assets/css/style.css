@@ -136,6 +136,10 @@
     justify-content: space-between;
 }
 
+#saved-jokes-container {
+    display:none;
+}
+
 #results_page {
     border-left:0;
     border-right:0;

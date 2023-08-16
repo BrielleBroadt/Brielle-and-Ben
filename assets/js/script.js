@@ -99,32 +99,41 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
 
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
-  
   if (jokeGenerated) {
     var localJokes = localStorage.getItem("saved-joke")
     var parsedLocalJokes = JSON.parse(localJokes);
     if (parsedLocalJokes != null){
       if (!parsedLocalJokes.includes(savedJoke[0])){
         parsedLocalJokes.push(savedJoke[0]);
-        // console.log(parsedLocalJokes[0])
-        // console.log(savedJoke)
-        console.log('1')
       }
     } else {
       parsedLocalJokes = savedJoke;
-      console.log(typeof(savedJoke))
-      console.log(typeof(parsedLocalJokes))
-      console.log('2')
     }
+
+    var jokesEl = document.getElementById('jokes-el');
+    jokesEl.innerHTML = '';
+    
+    for (var joke of parsedLocalJokes) {
+      var listItem = document.createElement('li');
+      listItem.className = 'joke-list-items';
+      listItem.textContent = joke;
+      jokesEl.appendChild(listItem);
+    }
+
     var jsonString = JSON.stringify(parsedLocalJokes)
     localStorage.setItem("saved-joke", jsonString)
   }
 })
 
-var savedJokes= document.getElementById("saved-jokes-container")
+var savedJokes = document.getElementById("saved-jokes-container")
 var openJokes = document.getElementById("open-jokes-btn")
-
 openJokes.addEventListener("click", function(){
+  if (savedJokes.style.display == 'block') {
+    savedJokes.style.display = 'none';
+  } else {
+    savedJokes.style.display = 'block';
+  }
+  
 })
 
 
