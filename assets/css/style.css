@@ -51,7 +51,6 @@
 .pass-box-1 {
     display:flex;
     justify-content: center;
-    /* position:relative; */
 }
 
 .pass-box-2 {
@@ -99,7 +98,6 @@
 #pass-container {
     display:flex;
     justify-content: right;
-    /* width:50vw; */
 }
 
 .container-box {
@@ -155,7 +153,6 @@
 #jokes-el {
     width:80vw;
     margin-bottom: 20px;
-    /* position:relative; */
 }
 
 .joke-list-items {
@@ -203,6 +200,7 @@
     }
 }
 
+/* Only add hover style if user is not using a mobile device */
 @media screen and (min-width:1020px){
     .icon:hover {
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);

@@ -1,3 +1,4 @@
+///////////////
 // Password API
 const memeEl = document.getElementById("checkbox-meme");
 var button = document.getElementById("password-button");
@@ -38,6 +39,9 @@ caps.addEventListener('click', checkCheckboxes)
 
 function checkCheckboxes() {
   memeEl.style.display = 'block';
+  // If any box is checked, display first image
+  // If any two are checked, display second image
+  // If all three are checked, display third
   if (num.checked + char.checked + caps.checked == 1) {
     memeEl.setAttribute("src", './assets/images/it-doesnt-do-anything.jpeg');
   } else if (num.checked + char.checked + caps.checked == 2) {
@@ -49,6 +53,7 @@ function checkCheckboxes() {
   }
 }
 
+///////////
 // Joke API
 var jokeGenerated = false;
 var savedJoke;
@@ -64,6 +69,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
   const misc = document.getElementById("Miscellaneous");
   var joke_categories = [any,programming,dark,pun,spooky,christmas,misc];
 
+  // Set joke category based on user radio input
   for (cat of joke_categories) {
     if (cat.checked) {
       category = cat.id;
@@ -79,7 +85,6 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
       const jokeEl = document.getElementById('jokeEl');
-
       if (data.type === 'single') {
         savedJoke[0] = data.joke;
         jokeEl.innerHTML = `<p>${data.joke}</p>`;
@@ -87,6 +92,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
         savedJoke[0] = data.setup + ' ' + data.delivery;
         jokeEl.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
       }
+      // When joke is displayed, page scrolls down so joke in in view
       jokeEl.scrollIntoView({behavior: 'smooth'});
       loadingIndicator2.style.display = "none";
       jokeGenerated = true;
@@ -97,6 +103,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
     });
   });
 
+// Display jokes on page
 function renderJokes() {
   var jokesEl = document.getElementById('jokes-el');
   jokesEl.innerHTML = '';
@@ -115,6 +122,7 @@ function renderJokes() {
       deleteButton.className = 'delete-button';
       deleteButton.textContent = 'X';
       
+      // If delete button is clicked, then the corresponding list item is deleted from local storage and innerHTML
       (function(index) {
         deleteButton.addEventListener('click', function() {
           parsedLocalJokes.splice(index, 1);
@@ -129,7 +137,7 @@ function renderJokes() {
   }
 }
   
-
+// Save joke to local storage
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
   if (jokeGenerated) {
@@ -148,6 +156,7 @@ saveBtn.addEventListener("click", function(){
   }
 })
 
+// Display/ hide jokes element
 var savedJokes = document.getElementById("saved-jokes-container")
 var openJokes = document.getElementById("open-jokes-btn")
 openJokes.addEventListener("click", function(){
@@ -159,7 +168,7 @@ openJokes.addEventListener("click", function(){
   renderJokes();
 })
 
-
+///////////////////////
 // Wizard hat generator
 const images = [
   './assets/images/wizardhat2.jpg',
