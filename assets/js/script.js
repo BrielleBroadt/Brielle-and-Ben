@@ -97,6 +97,21 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
     });
   });
 
+function renderJokes() {
+  var jokesEl = document.getElementById('jokes-el');
+  jokesEl.innerHTML = '';
+  var localJokes = localStorage.getItem("saved-joke");
+  var parsedLocalJokes = JSON.parse(localJokes);
+  if (parsedLocalJokes != null){
+    for (var joke of parsedLocalJokes) {
+      var listItem = document.createElement('li');
+      listItem.className = 'joke-list-items';
+      listItem.textContent = joke;
+      jokesEl.appendChild(listItem);
+    }
+  }
+}
+
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
   if (jokeGenerated) {
@@ -109,19 +124,9 @@ saveBtn.addEventListener("click", function(){
     } else {
       parsedLocalJokes = savedJoke;
     }
-
-    var jokesEl = document.getElementById('jokes-el');
-    jokesEl.innerHTML = '';
-    
-    for (var joke of parsedLocalJokes) {
-      var listItem = document.createElement('li');
-      listItem.className = 'joke-list-items';
-      listItem.textContent = joke;
-      jokesEl.appendChild(listItem);
-    }
-
     var jsonString = JSON.stringify(parsedLocalJokes)
     localStorage.setItem("saved-joke", jsonString)
+    renderJokes();
   }
 })
 
@@ -133,13 +138,12 @@ openJokes.addEventListener("click", function(){
   } else {
     savedJokes.style.display = 'block';
   }
-  
+  renderJokes();
 })
 
 
 // Wizard hat generator
 const images = [
-  // './assets/images/wizardhat1.jpg',
   './assets/images/wizardhat2.jpg',
   './assets/images/wizardhat3.jpg',
   './assets/images/wizardhat4.jpg',
