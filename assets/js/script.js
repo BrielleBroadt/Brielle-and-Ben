@@ -84,8 +84,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
         savedJoke[0] = data.joke;
         jokeEl.innerHTML = `<p>${data.joke}</p>`;
       } else if (data.type === 'twopart') {
-        savedJoke[0] = data.setup;
-        savedJoke[1] = data.delivery;
+        savedJoke[0] = data.setup + ' ' + data.delivery;
         jokeEl.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
       }
       jokeEl.scrollIntoView({behavior: 'smooth'});
@@ -100,16 +99,33 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
 
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
+  
   if (jokeGenerated) {
-  var savedJoke = localStorage.getItem("saved-joke")
-    localStorage
-  }})
+    var localJokes = localStorage.getItem("saved-joke")
+    var parsedLocalJokes = JSON.parse(localJokes);
+    if (parsedLocalJokes != null){
+      if (!parsedLocalJokes.includes(savedJoke[0])){
+        parsedLocalJokes.push(savedJoke[0]);
+        // console.log(parsedLocalJokes[0])
+        // console.log(savedJoke)
+        console.log('1')
+      }
+    } else {
+      parsedLocalJokes = savedJoke;
+      console.log(typeof(savedJoke))
+      console.log(typeof(parsedLocalJokes))
+      console.log('2')
+    }
+    var jsonString = JSON.stringify(parsedLocalJokes)
+    localStorage.setItem("saved-joke", jsonString)
+  }
+})
 
-  var savedJokes= document.getElementById("saved-jokes-container")
-  var openJokes = document.getElementById("open-jokes-btn")
+var savedJokes= document.getElementById("saved-jokes-container")
+var openJokes = document.getElementById("open-jokes-btn")
 
-  openJokes.addEventListener("click", function(){
-  })
+openJokes.addEventListener("click", function(){
+})
 
 
 // Wizard hat generator
