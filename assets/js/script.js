@@ -100,17 +100,35 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
 function renderJokes() {
   var jokesEl = document.getElementById('jokes-el');
   jokesEl.innerHTML = '';
+  
   var localJokes = localStorage.getItem("saved-joke");
   var parsedLocalJokes = JSON.parse(localJokes);
-  if (parsedLocalJokes != null){
-    for (var joke of parsedLocalJokes) {
+
+  if (parsedLocalJokes != null) {
+    for (var i = 0; i < parsedLocalJokes.length; i++) {
+      var joke = parsedLocalJokes[i];
       var listItem = document.createElement('li');
       listItem.className = 'joke-list-items';
       listItem.textContent = joke;
+
+      var deleteButton = document.createElement('button');
+      deleteButton.className = 'delete-button';
+      deleteButton.textContent = 'X';
+      
+      (function(index) {
+        deleteButton.addEventListener('click', function() {
+          parsedLocalJokes.splice(index, 1);
+          localStorage.setItem("saved-joke", JSON.stringify(parsedLocalJokes));
+          renderJokes();
+        });
+      })(i); 
+
+      listItem.appendChild(deleteButton);
       jokesEl.appendChild(listItem);
     }
   }
 }
+  
 
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
