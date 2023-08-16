@@ -82,6 +82,7 @@
     opacity: 1;
     width:200px;
     text-align: center;
+    z-index: 1;
 }
   
 
