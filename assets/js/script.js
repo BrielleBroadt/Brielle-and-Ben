@@ -93,8 +93,6 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
         savedJoke[0] = data.setup + ' ' + data.delivery;
         jokeEl.innerHTML = `<p>${data.setup}</p><p>${data.delivery}</p>`;
       }
-      // When joke is displayed, page scrolls down so joke in in view
-      jokeEl.scrollIntoView({behavior: 'smooth'});
       loadingIndicator2.style.display = "none";
       jokeGenerated = true;
     })
@@ -139,6 +137,7 @@ function renderJokes() {
 }
   
 // Save joke to local storage
+var saveIndicator = document.getElementById('save-indicator');
 saveBtn = document.getElementById('save-btn');
 saveBtn.addEventListener("click", function(){
   if (jokeGenerated) {
@@ -154,6 +153,11 @@ saveBtn.addEventListener("click", function(){
     var jsonString = JSON.stringify(parsedLocalJokes)
     localStorage.setItem("saved-joke", jsonString)
     renderJokes();
+
+    saveIndicator.style.display = 'block';
+    setTimeout(function() {
+      saveIndicator.style.display = 'none';
+    }, 2000);
   }
 })
 
