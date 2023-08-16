@@ -79,7 +79,7 @@ document.getElementById('fetchJokeButton').addEventListener('click', () => {
 
   const loadingIndicator2 = document.getElementById("loadingIndicator2");
   loadingIndicator2.style.display = "block";
-  loadingIndicator2.scrollIntoView({behavior: 'smooth'});
+  // loadingIndicator2.scrollIntoView({behavior: 'smooth'});
 
   const apiUrl = `https://v2.jokeapi.dev/joke/${category}`;
   fetch(apiUrl)
