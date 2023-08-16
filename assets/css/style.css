@@ -3,6 +3,8 @@
     justify-content: center;
     width:100vw;
     padding: 20px 0 20px 0;
+    background-color:rgb(33,73,107);
+    margin-top:5px;
 }
 
 #content {
