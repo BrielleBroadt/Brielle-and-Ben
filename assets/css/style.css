@@ -146,6 +146,10 @@
     align-items: center;
 }
 
+#saved-jokes-title {
+    font-size: larger;
+}
+
 #jokes-el {
     width:80vw;
     margin-bottom: 20px;
